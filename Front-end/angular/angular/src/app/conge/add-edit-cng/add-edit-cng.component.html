@@ -1,0 +1,43 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+  <div class="from-froup row">
+       <label class="col-sm-2 col-form-label">type conge</label>
+         <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]= "Type" placeholder="Enter le type de conge">
+        </div>
+        <label class="col-sm-2 col-form-label">Employee</label>
+        <div class="col-sm-10">
+          <input type="text"[(ngModel)]="Employee">
+        </div>
+        <label class="col-sm-2 col-form-label">Matric</label>
+        <div class="col-sm-10">
+          <input type="int"[(ngModel)]="Matric">
+        </div>
+
+
+
+        <label class="col-sm-2 col-form-label">Date Debut</label>
+        <div class="col-sm-10">
+        <input type="date"[(ngModel)]="DateDebut">
+        </div>
+
+         <label class="col-sm-2 col-form-label">Date Fin </label>
+         <div class="col-sm-10">
+         <input type="date"[(ngModel)]="DateFin">
+         </div>
+
+         <label class="col-sm-2 col-form-label">Duree de Conge</label>
+        <div class="col-sm-10">
+        <input type="int" class="form-control" [(ngModel)]= "Duree"
+           placeholder="Enter la Duree">
+         </div>
+
+
+
+      </div>
+
+</div>
+
+
+<button (click)="addConge()" *ngIf="cng.CongeId==0" class="btn btn-primary"> Add</button>
+<button (click)="updateConge()" *ngIf="cng.CongeId!=0" class="btn btn-primary"> Update</button>

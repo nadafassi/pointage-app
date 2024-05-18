@@ -1,0 +1,38 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+  <div class="from-froup row">
+       <label class="col-sm-2 col-form-label"></label>
+         <div class="col-sm-10">
+          <span type="datetime" class="form-control" [(ngModel)]="Timeout" >{{myDate|date:'M-d-yy h:mm'}}</span>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Employee</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  [(ngModel)]="Employee">
+          <label class="col-sm-2 col-form-label">user</label>
+          <div class="col-sm-10">
+            <select  class="form-control" [(ngModel)]="Employee">
+             <option>--Select--</option>
+             <option *ngFor= "let user of PointagesList">
+                {{user.PointageId}}
+            </option>
+            </select>
+           </div>
+          <button type="button" class="btn btn-primary float-right m-2"
+          data-bs-toggle="modal" data-bs-target="#exampleModal"
+            (click) ="checkoutPointage()"
+          data-backdrop="static" data-keyboard="false"
+          >
+            Add Pointage
+          </button>
+
+
+        </div>
+
+      </div>
+
+</div>
+
+
+
